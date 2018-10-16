@@ -1,0 +1,22 @@
+server:
+  port: 8081
+  context-path: /student
+
+spring:
+  application:
+    name: student
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://dev.tss.com:8080/eureka/
+  instance:
+    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    com.tss: DEBUG
+
+account:
+  uri: ACCOUNT
