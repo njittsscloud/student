@@ -28,6 +28,6 @@ public class StudentIao {
      * @return
      * */
     public UserBaseInfo getUserBaseInfoById(Long id) {
-        return restTemplate.getForObject(PROTOCOL_HTTP + "://" + accountUri + "/getUserBaseInfoById?id=" + id, UserBaseInfo.class);
+        return restTemplate.getForObject(PROTOCOL_HTTP + "://" + accountUri + "/getUserBaseInfoById/" + id, UserBaseInfo.class);
     }
 }
