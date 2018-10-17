@@ -15,8 +15,10 @@ public class StudentIao {
     private static final String PROTOCOL_HTTP = "http";
     private static final String PROTOCOL_HTTPS = "https";
 
-    @Value("${account.uri}")
-    private String accountUri;
+    @Value("${account.serviceId}")
+    private String accountServiceId;
+    @Value("${account.contextPath}")
+    private String accountContextPath;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -28,6 +30,13 @@ public class StudentIao {
      * @return
      * */
     public UserBaseInfo getUserBaseInfoById(Long id) {
-        return restTemplate.getForObject(PROTOCOL_HTTP + "://" + accountUri + "/getUserBaseInfoById?id=" + id, UserBaseInfo.class);
+        StringBuffer uri = new StringBuffer();
+        uri.append(PROTOCOL_HTTP)
+                .append("://")
+                .append(accountServiceId)
+                .append(accountContextPath)
+                .append("/account/getUserBaseInfoById/")
+                .append(id);
+        return restTemplate.getForObject(uri.toString(), UserBaseInfo.class);
     }
 }
