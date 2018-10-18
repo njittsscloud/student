@@ -35,7 +35,7 @@ public class StudentIao {
                 .append("://")
                 .append(accountServiceId)
                 .append(accountContextPath)
-                .append("/account/getUserBaseInfoById/")
+                .append("/getUserBaseInfoById/")
                 .append(id);
         return restTemplate.getForObject(uri.toString(), UserBaseInfo.class);
     }

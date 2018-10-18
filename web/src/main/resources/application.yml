@@ -5,6 +5,12 @@ server:
 spring:
   application:
     name: student
+  zipkin:
+      base-url: http://dev.tss.com:8010
+  sleuth:
+      sampler:
+        # 100%的概率将链路的数据上传给Zipkin Server，默认0.1
+        percentage: 1.0
 
 eureka:
   client:
