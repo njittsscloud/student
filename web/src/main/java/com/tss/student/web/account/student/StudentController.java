@@ -1,7 +1,6 @@
 package com.tss.student.web.account.student;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.tss.student.interfaces.account.student.StudentInterface;
 import com.tss.student.interfaces.account.student.vo.UserBaseInfo;
 import io.swagger.annotations.Api;
