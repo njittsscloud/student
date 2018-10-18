@@ -8,6 +8,8 @@ spring:
 
 eureka:
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://dev.tss.com:8080/eureka/
   instance:

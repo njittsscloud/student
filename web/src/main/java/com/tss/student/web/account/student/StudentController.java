@@ -1,5 +1,7 @@
 package com.tss.student.web.account.student;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.tss.student.interfaces.account.student.StudentInterface;
 import com.tss.student.interfaces.account.student.vo.UserBaseInfo;
 import io.swagger.annotations.Api;
@@ -22,9 +24,12 @@ public class StudentController {
 
     @ApiOperation(value = "获取用户基本信息", notes = "获取用户基本信息")
     @RequestMapping(value = "/getUserBaseInfoById/{id}", method = RequestMethod.GET)
+    @HystrixCommand(fallbackMethod = "getUserBaseInfoFallback")
     public UserBaseInfo getUserBaseInfo(@PathVariable Long id) {
         return studentInterface.getUserBaseInfoById(id);
     }
 
-
+    public UserBaseInfo getUserBaseInfoFallback(Long id) {
+        return new UserBaseInfo();
+    }
 }
