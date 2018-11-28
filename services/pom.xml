@@ -9,6 +9,7 @@
         <version>1.0.0</version>
     </parent>
 
+    <groupId>com.tss.student</groupId>
     <artifactId>services</artifactId>
     <packaging>jar</packaging>
     <name>services</name>

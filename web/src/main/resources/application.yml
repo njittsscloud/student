@@ -1,6 +1,6 @@
 server:
   port: 8081
-  context-path: /student
+#  context-path: /student
 
 spring:
   application:
@@ -33,3 +33,5 @@ logging:
 account:
   contextPath: /account 
   serviceId: account
+task:
+  serviceId: TSS-REPORT

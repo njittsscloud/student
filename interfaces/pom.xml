@@ -9,6 +9,7 @@
         <version>1.0.0</version>
     </parent>
 
+    <groupId>com.tss.student</groupId>
     <artifactId>interfaces</artifactId>
     <packaging>jar</packaging>
     <name>interfaces</name>
