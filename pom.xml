@@ -13,11 +13,12 @@
     <groupId>com.tss.student</groupId>
     <artifactId>student</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>student</name>
     <description>student</description>
 
     <modules>
+        <module>common</module>
         <module>interfaces</module>
         <module>services</module>
         <module>web</module>
@@ -41,6 +42,13 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- student -->
+            <dependency>
+                <groupId>com.tss.student</groupId>
+                <artifactId>common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            
             <dependency>
                 <groupId>com.tss.student</groupId>
                 <artifactId>interfaces</artifactId>
@@ -56,6 +64,19 @@
             <dependency>
                 <groupId>com.tss.student</groupId>
                 <artifactId>web</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <!-- basic -->
+            <dependency>
+                <groupId>com.tss</groupId>
+                <artifactId>basic-common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tss</groupId>
+                <artifactId>basic-site</artifactId>
                 <version>1.0.0</version>
             </dependency>
         </dependencies>
