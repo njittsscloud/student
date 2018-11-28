@@ -22,6 +22,12 @@
     </properties>
 
     <dependencies>
+        <!-- spring cloud -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
         <!-- spring boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
