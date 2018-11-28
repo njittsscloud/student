@@ -59,12 +59,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- mysql -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
         <!-- student -->
         <dependency>
             <groupId>com.tss.student</groupId>
