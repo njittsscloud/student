@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8070
 #  context-path: /student
 
 spring:
@@ -15,15 +15,15 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://dev.tss.com:8080/eureka/
-  instance:
-    metadata-map: 
-      management:
-        context-path: ${server.context-path}/actuator
-    health-check-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/health
-    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
+      defaultZone: http://dev.tss.com:8090/eureka/
+#  instance:
+#    metadata-map: 
+#      management:
+#        context-path: ${server.context-path}/actuator
+#    health-check-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/health
+#    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
 #    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/info
-    home-page-url: http://dev.tss.com:${server.port}/
+#    home-page-url: http://dev.tss.com:${server.port}/
 
 logging:
   level:
@@ -33,5 +33,5 @@ logging:
 account:
   contextPath: /account 
   serviceId: account
-task:
+report:
   serviceId: TSS-REPORT

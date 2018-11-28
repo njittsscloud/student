@@ -21,6 +21,12 @@
 		<dependency>
 			<groupId>com.tss</groupId>
 			<artifactId>basic-site</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mybatis.spring.boot</groupId>
+					<artifactId>mybatis-spring-boot-starter</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 </project>

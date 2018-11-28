@@ -20,8 +20,8 @@ public class StudentIao {
     @Value("${account.contextPath}")
     private String accountContextPath;
 
-    @Autowired
-    private RestTemplate restTemplate;
+//    @Autowired
+//    private RestTemplate restTemplate;
 
     /**
      * 获取用户基本信息
@@ -31,12 +31,13 @@ public class StudentIao {
      * */
     public UserBaseInfo getUserBaseInfoById(Long id) {
         StringBuffer uri = new StringBuffer();
-        uri.append(PROTOCOL_HTTP)
-                .append("://")
-                .append(accountServiceId)
-                .append(accountContextPath)
-                .append("/getUserBaseInfoById/")
-                .append(id);
-        return restTemplate.getForObject(uri.toString(), UserBaseInfo.class);
+//        uri.append(PROTOCOL_HTTP)
+//                .append("://")
+//                .append(accountServiceId)
+//                .append(accountContextPath)
+//                .append("/getUserBaseInfoById/")
+//                .append(id);
+//        return restTemplate.getForObject(uri.toString(), UserBaseInfo.class);
+        return null;
     }
 }
