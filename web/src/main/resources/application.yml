@@ -2,6 +2,15 @@ server:
   port: 8070
 #  context-path: /student
 
+logging:
+  level:
+    root: INFO
+    com.tss: DEBUG
+
+user:
+  studnet:
+    infoUrl: http://dev.tss.com:8080/studnet/getLoginInfo
+    
 spring:
   application:
     name: student
@@ -26,11 +35,6 @@ eureka:
 #    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
 #    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/info
 #    home-page-url: http://dev.tss.com:${server.port}/
-
-logging:
-  level:
-    root: INFO
-    com.tss: DEBUG
 
 account:
   contextPath: /account 
