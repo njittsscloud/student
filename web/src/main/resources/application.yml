@@ -8,8 +8,8 @@ logging:
     com.tss: DEBUG
 
 user:
-  studnet:
-    infoUrl: http://dev.tss.com:8080/studnet/getLoginInfo
+  student:
+    infoUrl: http://dev.tss.com:8080/student/getLoginInfo
     
 spring:
   application:
