@@ -30,6 +30,8 @@ public class TaskController {
     @ApiOperation(value = "实验任务列表", notes = "实验任务列表（分页）")
     @RequestMapping(value = "/getTaskList", method = RequestMethod.POST)
     public PageInfo<StudentTaskRespVO> getTaskList(@JsonParam(validation = true) StudentTaskReqVO param, @ApiIgnore @StudentLoginUser StudentUser studentUser) {
+        param.setStudentId(studentUser.getStudentId());
+        param.setStudentName(studentUser.getStudentName());
         return taskInterface.getStudentTaskList(param);
     }
 }
