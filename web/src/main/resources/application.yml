@@ -10,6 +10,8 @@ logging:
 user:
   student:
     infoUrl: http://dev.tss.com:8080/student/getLoginInfo
+  teacher:
+    infoUrl: http://dev.tss.com:8080/teacher/getLoginInfo
     
 spring:
   application:
