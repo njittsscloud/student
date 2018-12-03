@@ -9,15 +9,15 @@ logging:
 
 user:
   student:
-    infoUrl: http://dev.tss.com:8080/student/getLoginInfo
+    infoUrl: http://localhost:8080/student/getLoginInfo
   teacher:
-    infoUrl: http://dev.tss.com:8080/teacher/getLoginInfo
+    infoUrl: http://localhost:8080/teacher/getLoginInfo
     
 spring:
   application:
-    name: student
+    name: tss-student
   zipkin:
-      base-url: http://dev.tss.com:8010
+      base-url: http://localhost:8010
   sleuth:
       sampler:
         # 100%的概率将链路的数据上传给Zipkin Server，默认0.1
@@ -28,7 +28,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://dev.tss.com:8090/eureka/
+      defaultZone: http://localhost:8090/eureka/
 #  instance:
 #    metadata-map: 
 #      management:
@@ -39,7 +39,6 @@ eureka:
 #    home-page-url: http://dev.tss.com:${server.port}/
 
 account:
-  contextPath: /account 
-  serviceId: account
+  serviceId: TSS-ACCOUNT
 report:
   serviceId: TSS-REPORT
