@@ -4,7 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.tss.student.interfaces.task.TaskInterface;
 import com.tss.student.interfaces.task.vo.StudentTaskReqVO;
 import com.tss.student.interfaces.task.vo.StudentTaskRespVO;
-import com.tss.student.services.task.feign.ReportFeignService;
+import com.tss.student.services.task.feign.TaskFeignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class TaskService implements TaskInterface {
     private static final Logger LOG = LoggerFactory.getLogger(TaskService.class);
 
     @Autowired
-    private ReportFeignService reportFeignService;
+    private TaskFeignService reportFeignService;
     
     @Override
     public PageInfo<StudentTaskRespVO> getStudentTaskList(StudentTaskReqVO param) {

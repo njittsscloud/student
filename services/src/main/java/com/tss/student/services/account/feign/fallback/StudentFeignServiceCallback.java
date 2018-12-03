@@ -1,4 +1,4 @@
-package com.tss.student.services.account.feign.callback;
+package com.tss.student.services.account.feign.fallback;
 
 import com.tss.basic.common.util.JsonUtil;
 import com.tss.student.interfaces.account.vo.LoginUserInfoVO;
