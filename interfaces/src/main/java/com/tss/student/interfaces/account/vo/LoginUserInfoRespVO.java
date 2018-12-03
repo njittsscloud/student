@@ -8,7 +8,7 @@ import java.util.Date;
  * @author: MQG
  * @date: 2018/12/3
  */
-public class LoginUserInfoVO<T> {
+public class LoginUserInfoRespVO<T> {
     private long userId;
     private String userAcc;
     private String name;
@@ -18,46 +18,6 @@ public class LoginUserInfoVO<T> {
     private Date createTime;
     private String sessionId;
     private T extra;
-    private CookieInfo cookieInfo;
-
-    public static class CookieInfo {
-        private String cookiePath;
-        private String cookieDomain;
-        private String cookieName;
-        private String cookieValue;
-
-        public String getCookiePath() {
-            return cookiePath;
-        }
-
-        public void setCookiePath(String cookiePath) {
-            this.cookiePath = cookiePath;
-        }
-
-        public String getCookieDomain() {
-            return cookieDomain;
-        }
-
-        public void setCookieDomain(String cookieDomain) {
-            this.cookieDomain = cookieDomain;
-        }
-
-        public String getCookieName() {
-            return cookieName;
-        }
-
-        public void setCookieName(String cookieName) {
-            this.cookieName = cookieName;
-        }
-
-        public String getCookieValue() {
-            return cookieValue;
-        }
-
-        public void setCookieValue(String cookieValue) {
-            this.cookieValue = cookieValue;
-        }
-    }
 
     public String getUserAcc() {
         return userAcc;
@@ -115,11 +75,4 @@ public class LoginUserInfoVO<T> {
         this.name = name;
     }
 
-    public CookieInfo getCookieInfo() {
-        return cookieInfo;
-    }
-
-    public void setCookieInfo(CookieInfo cookieInfo) {
-        this.cookieInfo = cookieInfo;
-    }
 }
