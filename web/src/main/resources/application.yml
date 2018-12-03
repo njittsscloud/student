@@ -17,7 +17,7 @@ spring:
   application:
     name: tss-student
   zipkin:
-      base-url: http://localhost:8010
+      base-url: http://localhost:8093
   sleuth:
       sampler:
         # 100%的概率将链路的数据上传给Zipkin Server，默认0.1
