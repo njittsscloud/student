@@ -38,6 +38,13 @@ eureka:
 #    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/info
 #    home-page-url: http://dev.tss.com:${server.port}/
 
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+
 account:
   serviceId: TSS-ACCOUNT
 report:
