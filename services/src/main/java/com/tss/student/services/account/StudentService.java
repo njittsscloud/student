@@ -5,6 +5,7 @@ import com.tss.basic.site.user.item.CookieName;
 import com.tss.student.interfaces.account.StudentInterface;
 import com.tss.student.interfaces.account.vo.LoginUserInfoRespVO;
 import com.tss.student.interfaces.account.vo.LoginUserInfoVO;
+import com.tss.student.interfaces.account.vo.UserBaseInfo;
 import com.tss.student.interfaces.account.vo.UserIdentityVO;
 import com.tss.student.services.account.feign.StudentFeignService;
 import org.slf4j.Logger;
@@ -37,8 +38,8 @@ public class StudentService implements StudentInterface {
         response.addCookie(cookie);
     }
 
-//    @Override
-//    public UserBaseInfo getUserBaseInfoById(Long id) {
-//        return this.studentIao.getUserBaseInfoById(id);
-//    }
+    @Override
+    public UserBaseInfo getUserBaseInfoBySessionId(String sessionId) {
+        return studentFeignService.getUserBaseInfo(sessionId);
+    }
 }

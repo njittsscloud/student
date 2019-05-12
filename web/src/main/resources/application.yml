@@ -1,6 +1,6 @@
 server:
   port: 8070
-#  context-path: /student
+  context-path: /student
 
 logging:
   level:
@@ -8,50 +8,41 @@ logging:
     com.tss: DEBUG
 
 user:
-  auth: 
-    infoUrl: http://localhost:8095/oauth2/user-me
   student:
-    infoUrl: http://localhost:8080/student/info/getLoginInfo
+    infoUrl: http://localhost:8070/student/account/getUserBaseInfoBySessionId/
     
 spring:
   application:
     name: tss-student
-  # zipkin config
-  zipkin:
-      base-url: http://localhost:8093
-  sleuth:
-    sampler:
-      # 100%的概率将链路的数据上传给Zipkin Server，默认0.1
-      percentage: 1.0
 
 eureka:
   client:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8090/eureka/
+      defaultZone: http://localhost:8090/eureka-server/eureka/
 #  instance:
 #    metadata-map: 
 #      management:
 #        context-path: ${server.context-path}/actuator
-#    health-check-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/health
-#    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/swagger-ui.html
-#    status-page-url: http://dev.tss.com:${server.port}${server.context-path}/actuator/info
-#    home-page-url: http://dev.tss.com:${server.port}/
+#    health-check-url: http://localhost:${server.port}${server.context-path}/actuator/health
+#    status-page-url: http://localhost:${server.port}${server.context-path}/swagger-ui.html
+#    status-page-url: http://localhost:${server.port}${server.context-path}/actuator/info
+#    home-page-url: http://localhost:${server.port}/
 
 feign:
   client:
     config:
       default:
         connectTimeout: 10000
-        readTimeout: 10000
+        readTimeout: 30000
 hystrix: 
   command: 
     default: 
       execution: 
         isolation: 
           thread: 
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 30000
 
 account:
   serviceId: TSS-ACCOUNT

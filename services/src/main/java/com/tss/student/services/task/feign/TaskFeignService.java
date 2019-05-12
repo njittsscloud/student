@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author: MQG
  * @date: 2018/11/28
  */
-@FeignClient(value = "${report.serviceId}", fallbackFactory = TaskFeignServiceFallbackFactory.class)
+@FeignClient(value = "${report.serviceId}", path = "report", fallbackFactory = TaskFeignServiceFallbackFactory.class)
 public interface TaskFeignService {
 
     @RequestMapping(value = "/task/student/getTaskList", method = RequestMethod.POST)
