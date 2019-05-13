@@ -1,7 +1,6 @@
 package com.tss.student.services.account;
 
 import com.tss.basic.common.util.ModelMapperUtil;
-import com.tss.basic.site.user.item.CookieName;
 import com.tss.student.interfaces.account.StudentInterface;
 import com.tss.student.interfaces.account.vo.LoginUserInfoRespVO;
 import com.tss.student.interfaces.account.vo.LoginUserInfoVO;
